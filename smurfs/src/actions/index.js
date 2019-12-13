@@ -17,3 +17,14 @@ export const getSmurf = () => dispatch => {
       });
 }
 
+export const smurfSubmit = (smurfData) => dispatch => {
+    dispatch({ type: FETCH_SMURF_START });
+    axios.post('http://localhost:3333/smurfs', smurfData)
+    .then(res => {
+        console.log(res)
+        dispatch({ type: FETCH_SMURF_SUCCESS, payload: res.data})
+    })
+    .catch(err => {
+        dispatch({ type: FETCH_SMURF_FAILURE, payload: err.response });
+      });
+}
