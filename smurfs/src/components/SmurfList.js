@@ -8,10 +8,10 @@ const SmurfList = props => {
     return(
     <div>
        
-        <button onClick={() => props.dispatch(getSmurf())}>Get Smurfen</button>
+        {/* <button type='submit' onClick={() => props.dispatch(getSmurf)}>Get Smurfen</button>
         {props.isFetching && (
           <Loader type="Puff" color="#00BFFF" height={100} width={100} />
-        )}
+        )} */}
     
         {props.smurfs.map( blue => (
         <div>
